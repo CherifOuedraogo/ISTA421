@@ -1,0 +1,55 @@
+Name: ASP.NET HW07
+Author: Cherif Ouedraogo
+Date: August, 22 2019
+
+1. There are many kinds of tests, including Unit Tests. What is a unit test, and what does it enable you to do?
+Unit testing is a form of testing in which individual components are isolated from the rest of the application
+so their behavior can be thoroughly validated.
+
+2. What is the primary benefit of using unit tests?
+Unit testing is used to validate the behavior of individual components and features in an application.
+It forces to the code to be modular and ensure a more robust code. It makes the process more agile. It allows also to find test bugs early on.
+
+3. What is the purpose of using method GetHashCode() when using Assert.Equal()?
+It is to provide to the Assert.Equal() the hashed values of the objects to be compared. 
+
+4. The book states: \The chain of dependencies can make it difficult to understand what causes a test to fail." Why is this statement true?
+Becasue when a component has many dependencies it is difficult to isolate and test it without it dependencies...
+
+5. How do unit tests isolate small parts of an application?
+By defining methods in a fake class and checking if the methods behave accordingly.
+Or by diverting the dependency of the dependency of the small part.
+it initializes a small piece of an application, then it applies a stimulus to it and asserts the behavior.
+-Arrange: Create the object you want to test,
+-Act: Test the method on the object,
+-Assert: Check if the output object is the expected object created.
+
+6. According to the book, what is the key to isolating components?
+The key to isolating components is to use C# interfaces
+
+7. Briefly discuss the nature and purpose of a fake implementation of a class. What does a fake implementation do that a real implementation cannot do?
+Fake implementations are classes that contains interfaces and are used for isolating components effectively for testing. Therefore they do not need dependencies.
+Real implementations rely on dependcies to function...
+
+
+8. What is test driven development? What is the development cycle for test driven development? This is not in the book.
+writing the tests for a feature before implementing the feature itself. 
+Cycle: 
+-Add a test
+-Run all tests and see if the new one fails
+-Write some code
+-Run tests
+-Refactor code
+-Repeat
+
+9. What are parameterized tests and why would we want to use them?
+Tests that use a single method for multiple tests by removing the data used in the test.
+
+10. What is a mocking framework? What is the difference between a fake object and a mock object?
+It is a framework that contains fake objects for unit testing. A mock object can fake an object by only specifying its behavior but a fake object has to
+implement its specific behavior.  
+
+11. (Optional) Can you think of one very important drawback to writing unit tests?
+Test units have to be maintained as well and they might depend on external dependencies...
+------------------------------------------------------------------Notes----------------------------------
+Cyclomatic Complexity in software development...
